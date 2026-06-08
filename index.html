@@ -7,48 +7,61 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Purple Color */
+    /* Purple Background */
     .bg-purple {
-      background-color: #7a45de; 
+      background-color: #7a45de; /* Purple color */
     }
 
-    /* Header Spacing */
-    .navbar-nav .nav-item {
-      margin-right: 15px; 
+    /* Purple Text */
+    .text-purple {
+      color: #7a45de; /* Same purple as the background */
     }
 
-    /* Carousel Caption Styling */
-    .carousel-caption h5 {
-      font-size: 1.5rem;
-      font-weight: bold;
+    /* Make carousel caption background smaller */
+    .carousel-caption {
+      background-color: #7a45de; /* Purple background */
+      display: inline-block; /* Shrink background to fit text */
+      padding: 5px 10px; /* Add padding around the text */
+      border-radius: 5px; /* Rounded corners */
+      opacity: 0.9; /* Slight transparency */
     }
 
-    .carousel-caption p {
-      font-size: 1rem;
+    /* Style the carousel control buttons */
+    .custom-carousel-control .carousel-control-prev-icon,
+    .custom-carousel-control .carousel-control-next-icon {
+      background-color: #7a45de; /* Purple background for buttons */
+      border-radius: 50%; /* Make the buttons circular */
+      width: 40px;
+      height: 40px;
+    }
+
+    .custom-carousel-control:hover .carousel-control-prev-icon,
+    .custom-carousel-control:hover .carousel-control-next-icon {
+      background-color: #5e34b1; /* Darker purple on hover */
     }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white" href="index.html">My Portfolio</a>
-      <ul class="navbar-nav d-flex flex-row">
-        <li class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="projects.html">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<!-- Navigation Bar -->
+<nav class="navbar bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="index.html">My Portfolio</a>
+    <ul class="navbar-nav d-flex flex-row">
+      <li class="nav-item me-3">
+        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+      </li>
+      <li class="nav-item me-3">
+        <a class="nav-link text-white" href="about.html">About</a>
+      </li>
+      <li class="nav-item me-3">
+        <a class="nav-link text-white" href="projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Header -->
   <section class="bg-purple text-white py-5">
@@ -95,11 +108,11 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
